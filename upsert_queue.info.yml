@@ -1,0 +1,5 @@
+name: Upsert Queue
+type: module
+description: A queue service that prevents duplicate queue items.
+core: 8.x
+package: Queue

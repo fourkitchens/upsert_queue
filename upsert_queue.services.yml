@@ -1,0 +1,9 @@
+services:
+  upsert_queue.queue:
+    class: Drupal\upsert_queue\Queue\UpsertQueueFactory
+    arguments: ['@settings']
+    calls:
+      - [setContainer, ['@service_container']]
+  upsert_queue.database_queue:
+    class: Drupal\upsert_queue\Queue\UpsertQueueDatabaseFactory
+    parent: queue.database
